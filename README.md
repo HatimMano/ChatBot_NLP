@@ -27,7 +27,7 @@ Pre-processing steps applied to the dataset:
 - Remove stop words
 - Lemmatization and stemming
 
-## Training and Testing
+## Training
 
 The Doc2Vec model is trained using the pre-processed dataset. Similar questions are retrieved for every question in the dataset for testing. 
 The similarity between questions is calculated using the trained Doc2Vec model.
