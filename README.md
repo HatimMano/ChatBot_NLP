@@ -32,8 +32,8 @@ Pre-processing steps applied to the dataset:
 The Doc2Vec model is trained using the pre-processed dataset. Similar questions are retrieved for every question in the dataset for testing. 
 The similarity between questions is calculated using the trained Doc2Vec model.
 
-##Testing
+## Testing
 The chatbot's performance is evaluated by testing it on a subset of questions from the dataset. For each question, the model retrieves the most similar questions along with their corresponding answers. If the similarity score is below 50%, a message is sent to the user indicating that the question cannot be answered accurately. The results are printed for analysis.
 
-##Conclusion
+## Conclusion
 The model demonstrates good performance when answering questions from the dataset. It also handles questions outside the dataset well, especially those containing key words present in the training data. However, when encountering questions with no relevant information in the dataset, or when similarity scores are below 50%, the model's performance may be less accurate, prompting a notification to the user.
