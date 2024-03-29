@@ -1,39 +1,47 @@
-# Chatbot Model with Doc2Vec for School Dataset
+# School Chatbot Adventure: Doc2Vec Magic!
 
-## Introduction
+## Let's Dive In
+Welcome to our school chatbot adventure! Our chatbot is here to help you with school questions using Doc2Vec magic!
 
-This repository contains code for training a chatbot model specialized for school-related questions and answers using a Doc2Vec model. The model is trained on a dataset in English.
-
-## Prerequisites
-
-Ensure you have the following libraries installed in your Python environment:
+## Getting Ready
+Make sure you have these tools ready in your Python kit:
 - pandas
 - nltk
 - gensim
 - scikit-learn
 - langdetect
 
-## Dataset
+## The Data
+Our treasure trove lies in an Excel file named `Dataset_EFREI_en.xlsx`. Inside, you'll find questions and answers straight from our school's website.
 
-The dataset used for training is stored in an Excel file named `Dataset_EFREI_en.xlsx`. It contains two columns: "Question" and "Answer" scrapped from my school official website.
+## Getting Things Right
+We prepped the data by:
+- Making everything lowercase
+- Removing stuff like links and emojis
+- Getting rid of punctuation
+- Cutting it into pieces
+- Cleaning up common words
+- Simplifying words
 
-## Pre-processing
+## The Magic Begins
+Our chatbot uses Doc2Vec to find similar questions for each query. It's like finding twins for every question!
 
-Pre-processing steps applied to the dataset:
-- Convert text to lowercase
-- Remove URLs, mentions, hashtags, and emojis
-- Remove punctuation
-- Tokenize text
-- Remove stop words
-- Lemmatization and stemming
+## Testing Time
+We threw some questions at our chatbot to see how it does. If it wasn't sure about an answer (less than 50% sure), it gave a little heads up.
 
-## Training
+## The End Result
+Our chatbot's pretty good with questions from our school stuff. It tries its best with new questions too, but sometimes it's not so sure. Still, it's a handy helper for school stuff!
 
-The Doc2Vec model is trained using the pre-processed dataset. Similar questions are retrieved for every question in the dataset for testing. 
-The similarity between questions is calculated using the trained Doc2Vec model.
 
-## Testing
-The chatbot's performance is evaluated by testing it on a subset of questions from the dataset. For each question, the model retrieves the most similar questions along with their corresponding answers. If the similarity score is below 50%, a message is sent to the user indicating that the question cannot be answered accurately. The results are printed for analysis.
+## There are two questions from outside the dataset
+1) Relevant question:
+Question asked: Give me information about deadlines for applications.
+Question twin: What be the deadline to apply for A overlord program ?
+Similarity: 98.6%
+Answer: students can apply throughout the year, and preferably before may 15th, to secure a place in our graduate program. be aware that some of our programs have limited availability; it is therefore recommended to apply early.
 
-## Conclusion
-The model demonstrates good performance when answering questions from the dataset. It also handles questions outside the dataset well, especially those containing key words present in the training data. However, when encountering questions with no relevant information in the dataset, or when similarity scores are below 50%, the model's performance may be less accurate, prompting a notification to the user.
+2) Irrelevant question:
+Question asked: question completely irrelevant ?
+Question "twin": Do I need to submit test scores such as GRE/GMAT ?
+Similarity: 22.8%
+Answer: We are sorry, we didn't understand your question.
