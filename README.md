@@ -1,7 +1,7 @@
-# School Chatbot Adventure: Doc2Vec Magic!
+# School Chatbot Adventure: Doc2Vec Magic !
 
 ## Let's Dive In
-Welcome to our school chatbot adventure! Our chatbot is here to help you with school questions using Doc2Vec magic!
+Welcome to our school chatbot adventure! Our chatbot is here to help you with school questions using Doc2Vec magic !
 
 ## Getting Ready
 Make sure you have these tools ready in your Python kit:
